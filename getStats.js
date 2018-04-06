@@ -18,7 +18,7 @@ $("a.notranslate").each(function() {
 
 // output pattern
 $(".instata_output").remove();
-$("<div class='instata_output'><h3 class='_fd86t'>Instagram onpage stats</h3><p class='instata_row1'></p><p class='instata_row2'><p class='instata_row3'></p><p class='instata_row4'></div>").insertAfter("header");
+$("<div class='instata_output'><h3 class='_fd86t'>Instagram follower checker</h3><p class='instata_row1'></p><p class='instata_row2'><p class='instata_row3'></p><p class='instata_row4'></div>").insertAfter("header");
 
 
 // check status from local storage
