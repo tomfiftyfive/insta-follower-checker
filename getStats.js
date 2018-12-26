@@ -7,6 +7,7 @@
 var instataCounter = [];
 var notFollowingBack = [];
 var followforfollow = 0;
+var outputDisplayBeforeEl = "#react-root";
 // get local storage
 var instataStatus = localStorage.getItem("instataStatus");
 
@@ -18,14 +19,14 @@ $("a.notranslate").each(function() {
 
 // output pattern
 $(".instata_output").remove();
-$("<div class='instata_output'><h3 class='_fd86t'>Instagram follower checker</h3><p class='instata_row1'></p><p class='instata_row2'><p class='instata_row3'></p><p class='instata_row4'></div>").insertAfter("header");
+$("<div class='instata_output'><h3 class='_fd86t'>Instagram follower checker</h3><p class='instata_row1'></p><p class='instata_row2'><p class='instata_row3'></p><p class='instata_row4'></div>").insertBefore(outputDisplayBeforeEl);
 
 
 // check status from local storage
 if(instataStatus == "1") {
 	// STEP 2 I FOLLOW...
 	console.log("Followed recorded.");
-	$(".instata_row2").html("Step 2 DONE").css("color", "blue");
+	$(".instata_row2").html("Step 2 DONE");
 	localStorage.setItem("instataStatus", "0");
 	localStorage.setItem("instataFollowedList", instataCounter);
 
@@ -45,7 +46,7 @@ if(instataStatus == "1") {
 
 	});
 
-	$(".instata_row3").html("You follow " + instataCounter.length + ". And " + follower.length + " are following you. Follow for follow: " + followforfollow);
+	$(".instata_row3").html("You are following " + instataCounter.length + ". And " + follower.length + " are following you. Follow for follow: " + followforfollow);
 
 	$(".instata_row4").html("Not following back:<br>");
 	$.each(notFollowingBack, function( k, v ) {
@@ -55,12 +56,10 @@ if(instataStatus == "1") {
 } else {
 	// STEP 1 FOLLOWER
 	console.log("Follower recorded, now open followed.");
-	$(".instata_row2").html("Step 1 DONE - Follower recorded, now open followed and scroll down. Then click the extension icon again!").css("color", "blue");
+	$(".instata_row2").html("Step 1 DONE - Follower recorded, now open followed and scroll down. Then click the extension icon again!");
 	localStorage.setItem("instataStatus", "1");
 	localStorage.setItem("instataFollowerList", JSON.stringify(instataCounter));
 }
 
 // create output
 $(".instata_row1").html(">> " + instataCounter.length + " items found <<");
-
-

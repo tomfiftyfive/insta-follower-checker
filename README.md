@@ -10,3 +10,8 @@ Simple (damn simple) instagram frontend follower checker via chrome extension. W
 - Click on the extension icon (Step 1)
 - Now same thing with the "followed" and click again on the extension icon, after you scrolled completely down.
 - Result is shown below your instagram profile pic.
+
+## Version
+
+- 1.0 base
+- 1.1 new icon, some fixes
