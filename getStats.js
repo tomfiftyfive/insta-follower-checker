@@ -7,7 +7,7 @@
 var instataCounter = [];
 var notFollowingBack = [];
 var followforfollow = 0;
-var outputDisplayBeforeEl = "#react-root";
+var outputDisplayBeforeEl = "main";
 // get local storage
 var instataStatus = localStorage.getItem("instataStatus");
 
